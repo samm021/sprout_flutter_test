@@ -18,8 +18,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   void getContactsData() async {
     var contactsData = await ContactModel().getContactsData();
-
-    print(contactsData);
+    contactsData = contactsData['data'];
 
     Navigator.push(context, MaterialPageRoute(
         builder: (context) {
